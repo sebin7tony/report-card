@@ -9,26 +9,36 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/student',function(req,res){
+router.get('/student',function(req,res){
 
-    var marks = [];
+    //var marks = [];
 
     console.log("req.body "+JSON.stringify(req.body,null,4));
 
-    var studentBody = req.body;
+    var studentBody = {
+                      "studentID": "ST12",
+                      "marks": []
+                      };
 
-    var tempMarkList = req.body.marks;
-
-    req.body.marks = [];
-    var holder = [];
+    var markz = {
+        "examName": "Series 1",
+        "scores": {
+            "maths": {
+                "score": 48,
+                "total": 50,
+                "teacher": "xxxx"
+            }
+        }
+    }
+    var marks;
 
     //console.log("tempMarkList"+JSON.stringify(tempMarkList,null,4));
 
 
         //console.log("Inside loop1");
-        marks[0] = new Marks(tempMarkList[0]);
+        marks = new Marks(markz);
 
-        marks[0].save(function(err,mark){
+        marks.save(function(err,mark){
 
             if(err){
             

@@ -16,7 +16,8 @@ db.once('open',function(){
 });
 
 //require('./model/marks');
-require('./model/student');
+//require('./model/student');
+require('./model/test');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

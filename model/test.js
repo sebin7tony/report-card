@@ -3,9 +3,9 @@
 var mongoose = require('mongoose');
 
 var markSchema = mongoose.Schema({
-        examName: String
+        examName: String,
         scores : mongoose.Schema.Types.Mixed
-    }); 
+}); 
 
 //mongoose.model('marks',markSchema);
 

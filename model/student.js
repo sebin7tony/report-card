@@ -5,33 +5,44 @@ var mongoose = require('mongoose');
 var markSchema = mongoose.Schema({
         year: String,
         typeOfExam: String,
-        examName: {type : String, unique : true},
+        examName: String,
         scores : mongoose.Schema.Types.Mixed
-    }); 
-
-//mongoose.model('marks',markSchema);
+ }); 
 
 
-var studentSchema = mongoose.Schema({
+var StudentSchema = mongoose.Schema({
 
-    studentID: {type : String, unique : true} ,
+    studentID: {type : String, unique : true},
     personalDetails: {
         Name: String,
-        ParentsName: String
+        Parent: {
+            name: String,
+            email: String,
+            contact: String
+        },
+        address: String,
+        dob: Date
     },
-    accademicDetails: {
-        RollNo: String,
-        clas: String,
-        Division: String
-    },
-    school: {
-        Name: String,
-        address: String
-    },
-    //marks: [markSchema]
-    marks: [{type : mongoose.Types.ObjectId, ref : 'marks'}]
-
+    accademicDetails: [
+        {
+            RollNo: String,
+            Class: String,
+            Division: String,
+            startyear: String,
+            classTeacher: {
+                name: String,
+                contactNumber: String
+            }
+        }],
+    school: [
+        {
+            Name: String,
+            address: String,
+            startDate: Date,
+            endDate: Date
+        }],
+    marks: [markSchema]
 });
 
-mongoose.model('marks',markSchema);
-mongoose.model('student',studentSchema);
+
+mongoose.model('student',StudentSchema);

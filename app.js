@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/reports');
+mongoose.connect('mongodb://localhost/reportcard');
 
 var db = mongoose.connection;
 
@@ -15,13 +15,11 @@ db.once('open',function(){
     console.log("Mongodb database connected by sebin!!");
 });
 
-//require('./model/marks');
-//require('./model/student');
-require('./model/test');
+require('./model/student');
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
 
 
 var app = express();

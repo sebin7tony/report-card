@@ -1,0 +1,39 @@
+
+
+<div class="container" >
+	
+	<div class="container" >
+		<div class="row" style="border:solid 1px black;">
+			<div class="col-md-3" style="border-right : solid 1px black;background-color:#E7E8E8;">
+				<h2>Student ID</h2>
+        	</div>
+        	<div class="col-md-9" style="background-color: #E7E8E8;">
+        		<h2>Student Marks details</h2>
+        	</div>
+
+		</div>
+
+		<div class="row" style="border:solid 1px black;">
+        	<div class="col-md-3" style="background-color: white;">
+        		
+        		<ul class="list-group" style="margin-top : 15px;" >
+    				<li class="list-group-item" ng-repeat = "student in students" ng-click="setSelected($index)" 
+    					ng-class = "{selected : $index === isSelectedStudent}">
+    					{{student.studentID}}
+    			    </li>
+				</ul>
+
+        	</div>
+        	<div class="col-md-9" style="background-color: white;margin-top : 15px;border-left : solid 1px black;">
+                <h3>{{studentConfig[isSelectedStudent].studentID}}</h3>
+                
+                <!--<detail-table grid-dat="myData['marks'][0].markList"></detail-table>-->
+                 <div ng-repeat="gridOption in studentConfig[isSelectedStudent]['marks']">
+                    <h4><b>{{gridOption.examName}}</b> -> {{gridOption.year}}</h4>
+        		    <custom-grid  items="gridOption.markList"></custom-grid>
+                </div> 
+        	</div>
+    	</div>
+	</div>
+	
+</div>

@@ -6,6 +6,7 @@ var markSchema = mongoose.Schema({
         year: String,
         typeOfExam: String,
         examName: String,
+        dateOfExam : { type: Date, default: Date.now },
         scores : mongoose.Schema.Types.Mixed
  }); 
 

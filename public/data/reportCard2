@@ -51,40 +51,40 @@
             "year": 2015,
             "typeOfExam": "Series",
             "examName": "Series 1",
-            "scores": {
-                "maths": {
+            "scores": [{
+                    "subject":"maths",
                     "score": 48,
                     "total": 50,
                     "teacher": {
                         "name": "Anto John",
                         "contactNumber": "9812312312"
                     }
-                },
-                "biology": {
+                },{
+                    "subject":"biology",
                     "score": 38,
                     "total": 50,
                     "teacher": {
                         "name": "Jessy Joseph",
                         "contactNumber": "9812312312"
                     }
-                },
-                "chemistry": {
+                },{
+                    "subject": "chemistry",
                     "score": 49,
                     "total": 50,
                     "teacher": {
                         "name": "Ajitha KV",
                         "contactNumber": "9812312312"
                     }
-                },
-                "physics": {
+                },{
+                    "subject":"physics",
                     "score": 50,
                     "total": 50,
                     "teacher": {
                         "name": "Mini Haripad",
                         "contactNumber": "9812312312"
                     }
-                },
-                "English": {
+                },{
+                    "subject": "English",
                     "score": 44,
                     "total": 50,
                     "teacher": {
@@ -92,54 +92,54 @@
                         "contactNumber": "9812312312"
                     }
                 }
-            }
+            ]
         },
         {
             "year": 2015,
             "typeOfExam": "Series",
             "examName": "Series 2",
-            "scores": {
-                "maths": {
-                    "score": 48,
+            "scores": [{
+                    "subject":"maths",
+                    "score": 38,
                     "total": 50,
                     "teacher": {
                         "name": "Anto John",
                         "contactNumber": "9812312312"
                     }
-                },
-                "biology": {
-                    "score": 38,
+                },{
+                    "subject":"biology",
+                    "score": 28,
                     "total": 50,
                     "teacher": {
                         "name": "Jessy Joseph",
                         "contactNumber": "9812312312"
                     }
-                },
-                "chemistry": {
-                    "score": 49,
+                },{
+                    "subject": "chemistry",
+                    "score": 39,
                     "total": 50,
                     "teacher": {
                         "name": "Ajitha KV",
                         "contactNumber": "9812312312"
                     }
-                },
-                "physics": {
-                    "score": 50,
+                },{
+                    "subject":"physics",
+                    "score": 40,
                     "total": 50,
                     "teacher": {
                         "name": "Mini Haripad",
                         "contactNumber": "9812312312"
                     }
-                },
-                "English": {
-                    "score": 44,
+                },{
+                    "subject": "English",
+                    "score": 34,
                     "total": 50,
                     "teacher": {
                         "name": "philo Thomas",
                         "contactNumber": "9812312312"
                     }
                 }
-            }
+            ]
         }
     ]
 }
